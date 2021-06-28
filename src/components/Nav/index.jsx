@@ -13,9 +13,6 @@ function Nav() {
       <a className={Styles.link} href="/projects">
         Projects
       </a>
-      <a className={Styles.link} href="/about">
-        About
-      </a>
       <a className={Styles.social} href="https://github.com/jcared">
         <svg
           className={Styles.socialicon}
