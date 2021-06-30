@@ -10,11 +10,13 @@ const projects = Astro.fetchContent('./project/**/*.md');
 const featuredProject = projects[0];
 ---
 
-<html>
+<html lang="en-us">
   <head>
   <link rel="sitemap" href="/sitemap.xml" />
     <MainHead title="Jaden Curley - personal site" />
     <style lang="scss">
+    html{background-color:var(--t-bg)}
+
       $w-s: 750px;
 
       .hero {
@@ -34,7 +36,7 @@ const featuredProject = projects[0];
 
       .gradient,
       .gradient2 {
-        background-image: url('/assets/mesh-gradient.jpg');
+        background-image: url('/assets/mesh-gradient.webp');
         pointer-events: none;
         opacity:70%;
         mix-blend-mode: screen;
@@ -81,10 +83,12 @@ const featuredProject = projects[0];
 
       .grid {
         display: grid;
+        display: -ms-grid;
         grid-gap: 2rem;
 
         @media (min-width: 1200px) {
           grid-template-columns: 2fr 1fr;
+          -ms-grid-columns: 2fr 1fr;
         }
       }
 
@@ -189,14 +193,15 @@ const featuredProject = projects[0];
     <Nav />
     <header class="hero">
       <img
+      alt=""
         width="1600"
         height="1131"
         class="img"
-        src="/assets/adams/adams.jpg"
-        srcSet="/assets/adams/adams_672.jpg 672w,
-        /assets/adams/adams_1120.jpg 1120w,
-        /assets/adams/adams_1664.jpg 1664w,
-        /assets/adams/adams_2784.jpg 2784w,"
+        src="/assets/adams/adams.webp"
+        srcSet="/assets/adams/adams_672.webp 673w,
+        /assets/adams/adams_1120.webp 1121w,
+        /assets/adams/adams_1664.webp 1665w,
+        /assets/adams/adams_2784.webp 2785w,"
         sizes="(max-width: 672px) 672px, (max-width: 1120px) 1120px, (max-width: 1664px) 1664px, (max-width: 2784px) 2784px, 1120px"
       />
       <div class="gradient" />
@@ -234,7 +239,7 @@ const featuredProject = projects[0];
           <h3 class="sectionTitle">About me</h3>
           <p class="bio">
             <span class="profile">
-            <Avatar src="/assets/portrait.png" alt="Picture of Jaden" />
+            <Avatar src="/assets/portrait.webp" alt={"Picture of Jaden"} />
             </span>
              	&emsp; 	&emsp;<span style="font-weight:bold;">Hello!</span> I’m Jaden, a young, ready to go person who is looking to expand my horizons and experience! This site is primarily dedicated to showcasing my projects, work experience, and whatever else!
           </p>

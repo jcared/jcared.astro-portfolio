@@ -9,7 +9,9 @@ const { content } = Astro.props;
 <html>
   <head>
   <link rel="sitemap" href="/sitemap.xml" />
-    <MainHead title={content.title} />
+    <MainHead title={content.title + " - Jaden Curley"} description={content.description}/>
+    <meta name="og:title" property="og:title" content={content.title}>
+    <meta name="og:image" property="og:image" content={content.image}>
     <style lang="scss">
       .hero {
         padding: 8rem;

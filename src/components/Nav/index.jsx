@@ -13,7 +13,11 @@ function Nav() {
       <a className={Styles.link} href="/projects">
         Projects
       </a>
-      <a className={Styles.social} href="https://github.com/jcared">
+      <a
+        title="Jaden's Github"
+        className={Styles.social}
+        href="https://github.com/jcared"
+      >
         <svg
           className={Styles.socialicon}
           xmlns="http://www.w3.org/2000/svg"
