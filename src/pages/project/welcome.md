@@ -2,7 +2,7 @@
 layout: ../../layouts/project.astro
 title: Welcome
 client: Self
-published_at: 2020-06-28 14:00:00
+published_at: 2021-06-28 14:00:00
 img: https://images.unsplash.com/photo-1547234935-80c7145ec969?fit=crop&w=1400&h=700&q=75
 description: |
   To build a somewhat solid website in less than 24 hours.
