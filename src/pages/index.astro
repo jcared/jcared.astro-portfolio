@@ -10,11 +10,13 @@ const projects = Astro.fetchContent('./project/**/*.md');
 const featuredProject = projects[0];
 ---
 
-<html>
+<html lang="en-us">
   <head>
   <link rel="sitemap" href="/sitemap.xml" />
     <MainHead title="Jaden Curley - personal site" />
     <style lang="scss">
+    html{background-color:var(--t-bg)}
+
       $w-s: 750px;
 
       .hero {
@@ -81,10 +83,12 @@ const featuredProject = projects[0];
 
       .grid {
         display: grid;
+        display: -ms-grid;
         grid-gap: 2rem;
 
         @media (min-width: 1200px) {
           grid-template-columns: 2fr 1fr;
+          -ms-grid-columns: 2fr 1fr;
         }
       }
 
@@ -189,6 +193,7 @@ const featuredProject = projects[0];
     <Nav />
     <header class="hero">
       <img
+      alt=""
         width="1600"
         height="1131"
         class="img"
@@ -234,7 +239,7 @@ const featuredProject = projects[0];
           <h3 class="sectionTitle">About me</h3>
           <p class="bio">
             <span class="profile">
-            <Avatar src="/assets/portrait.webp" alt="Picture of Jaden" />
+            <Avatar src="/assets/portrait.webp" alt={"Picture of Jaden"} />
             </span>
              	&emsp; 	&emsp;<span style="font-weight:bold;">Hello!</span> I’m Jaden, a young, ready to go person who is looking to expand my horizons and experience! This site is primarily dedicated to showcasing my projects, work experience, and whatever else!
           </p>

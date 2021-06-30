@@ -9,7 +9,7 @@ function Footer() {
       <script
         defer
         src="https://static.cloudflareinsights.com/beacon.min.js"
-        data-cf-beacon={"{ 'token': 'e4f22e8dab6640c4bc43359e6e17c575' }"}
+        data-cf-beacon={"{ 'token': 'e5f22e8dab6640c4bc43359e6e17c575' }"}
       ></script>
     </footer>
   );
