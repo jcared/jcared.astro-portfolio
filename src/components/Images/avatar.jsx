@@ -1,5 +1,5 @@
 import { h } from "preact";
-import Styles from "./styles.module.scss";
+import Styles from "./avatar.styles.module.scss";
 
 function Avatar(props) {
   return (
@@ -9,6 +9,8 @@ function Avatar(props) {
       sizes={props.sizes}
       alt={props.alt}
       class={Styles.profile_image}
+      width={props.width}
+      height={props.height}
     />
   );
 }

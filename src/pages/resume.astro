@@ -1,0 +1,127 @@
+---
+import MainHead from "../components/MainHead.astro";
+import Footer from "../components/Footer/index.jsx";
+import Nav from "../components/Nav/index.jsx";
+import Button from "../components/Button/index.jsx";
+
+---
+<html lang="en-us">
+<head>
+
+    <link rel="sitemap" href="/sitemap.xml" />
+    <MainHead title="resume - Jaden Curley" description="What my resume is like and why you should care"/>
+    <style lang="scss">
+        .center{display:block;margin-left:auto;margin-right:auto;text-align: center;}  
+        .text-indent{text-indent:2em;}
+        .item-list{
+            width:fit-content;text-align:left;
+        }
+
+
+        .grid {
+            display: grid;
+            display: -ms-grid;
+            grid-gap: 2rem;
+
+            @media (min-width: 1200px) {
+                -ms-grid-columns: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        p {
+            font-size: var(--f-u1)
+        }
+        .pdf_img_hover div.pdf {
+            position: relative;
+        }
+        .pdf_img_hover div.pdf::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
+            display: block;
+            content: '';
+            width: 0;
+            height: 0;
+            background: rgba(220,220,230,.1);
+            border-radius: 100%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+        .pdf_img_hover div.pdf:hover::before {
+            -webkit-animation: circle .75s;
+            animation: circle .75s;
+        }
+
+        .resume_thankyou {
+            width:300px;
+        }
+
+        div.pdf{width:100%;height:auto;}
+
+        @-webkit-keyframes circle {
+            0% {
+                opacity: 1;
+            }
+            40% {
+                opacity: 1;
+            }
+            100% {
+                width: 125%;
+                height: 125%;
+                opacity: 0;
+            }
+        }
+        @keyframes circle {
+            0% {
+                opacity: 1;
+            }
+            40% {
+                opacity: 1;
+            }
+            100% {
+                width: 125%;
+                height: 125%;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <Nav />    
+    <main class="wrapper">
+        <h1 class="center">Resume</h1>
+        <div class="grid">
+            <div class="column pdf_img_hover">
+                <a href="/Jaden Curley - resume.pdf"><div class="pdf"><span style="visibility: hidden;display:none;">My Full Resume</span><img src="/assets/resume/resume_preview.webp" class="resume_hover" alt="a preview of my resume" width=102%> </div> </a>
+            </div>
+            <div class="column">
+            <video class="center" alt="resume gif" autoplay loop muted inline>
+                <source src="/assets/resume/resume.webm" type="video/webm">
+                <source src="/assets/resume/resume.mp4" type="video/mp4">
+                <img src="/assets/resume/resume.gif" alt=""/>
+            </video>
+                <h2 class="center">Working with Segmented Resumes</h2>
+                <p style="text-indent:20px;">When working with modern hiring sites and services like Indeed™ or Glassdoor™, many candidates compete to gain the attention of their employer. In a fierce race to optimize every aspect of their own applicant strategy short resumes with only relevant details are made to help hiring managers make the best choices quicly and painlessly.</p> 
+                <p>My main goals in this resume project are the following:</p>
+                <div class="ml5">
+                    <div class="item-list">
+                        <ul>
+                            <li>I want to to make this process as painful as possible.</li>
+                            <li>I want people to be able to view my full qualifications.</li>
+                            <li>I want to get hired; it's just that simple.</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>By doing this, I hope anyone who comes to this site is able to, at the very least, gain insight into my qualifications as a candidate at your company!</p>
+            <video class="center resume_thankyou" alt="Thank you for your time gif" autoplay loop muted inline>
+                <source src="/assets/resume/thankyouforyourtime.webm" type="video/webm">
+                <source src="/assets/resume/thankyouforyourtime.mp4" type="video/mp4">
+                <img src="/assets/resume/thankyouforyourtime.gif" alt=""/>
+            </video>
+            </div>
+        </div>
+    </main>
+    <Footer />
+ </html>

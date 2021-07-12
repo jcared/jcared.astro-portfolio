@@ -4,7 +4,7 @@ import Button from '../components/Button/index.jsx';
 import Nav from '../components/Nav/index.jsx';
 import Footer from '../components/Footer/index.jsx';
 import PorfolioPreview from '../components/PortfolioPreview/index.jsx';
-import Avatar from '../components/Images/index.jsx';
+import Avatar from '../components/Images/avatar.jsx';
 
 const projects = Astro.fetchContent('./project/**/*.md');
 const featuredProject = projects[0];
@@ -13,7 +13,7 @@ const featuredProject = projects[0];
 <html lang="en-us">
   <head>
   <link rel="sitemap" href="/sitemap.xml" />
-    <MainHead title="Jaden Curley - personal site" />
+    <MainHead title="Jaden Curley - personal site" description="The site previewing all things around Jaden Curley :)"/>
     <style lang="scss">
     html{background-color:var(--t-bg)}
 
@@ -37,6 +37,8 @@ const featuredProject = projects[0];
       .gradient,
       .gradient2 {
         background-image: url('/assets/mesh-gradient.webp');
+        background-repeat:no-repeat;
+        background-size: cover;
         pointer-events: none;
         opacity:70%;
         mix-blend-mode: screen;
@@ -82,13 +84,13 @@ const featuredProject = projects[0];
       }
 
       .grid {
-        display: grid;
         display: -ms-grid;
+        display: grid;
         grid-gap: 2rem;
 
         @media (min-width: 1200px) {
-          grid-template-columns: 2fr 1fr;
           -ms-grid-columns: 2fr 1fr;
+          grid-template-columns: 2fr 1fr;
         }
       }
 
@@ -239,11 +241,7 @@ const featuredProject = projects[0];
           <h3 class="sectionTitle">About me</h3>
           <p class="bio">
             <span class="profile">
-            <Avatar src="/assets/portrait/portrait.webp" alt={"Picture of Jaden"} srcset="/assets/portrait/portrait_150.webp 151w,
-        /assets/portrait/portrait_558.webp 559w,
-        /assets/portrait/portrait_960.webp 961w,
-        /assets/portrait/portrait_1140.webp 1440w,"
-        sizes="(max-width: 151px) 151px, (max-width: 558px) 558px, (max-width: 960px) 960px, (max-width: 1441px) 1441px, 558px" />
+            <Avatar src="/assets/portrait/portrait_400.webp" width={275} height={275} alt={"Picture of Jaden"} />
             </span>
              	&emsp; 	&emsp;<span style="font-weight:bold;">Hello!</span> I’m Jaden, a young, ready to go person who is looking to expand my horizons and experience! This site is primarily dedicated to showcasing my projects, work experience, and whatever else!
           </p>
