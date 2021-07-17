@@ -9,10 +9,12 @@ function Footer() {
       <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap"
         rel="stylesheet"
+        crossorigin
       />
       <script
         defer
         src="https://static.cloudflareinsights.com/beacon.min.js?token=8394d8c0148c4c1b9817053c13520829"
+        crossorigin
       ></script>
     </footer>
   );
