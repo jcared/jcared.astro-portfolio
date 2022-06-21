@@ -1,5 +1,5 @@
 import { h } from "preact";
-import Styles from "./styles.module.scss";
+import Styles from "./gif.styles.module.scss";
 
 function GifEmbed(props) {
   return (
@@ -9,7 +9,7 @@ function GifEmbed(props) {
         alt={props.alt}
         sizes={props.sizes}
         alt={props.alt}
-        class={Styles.}
+        class={}
         width={props.width}
         height={props.height}
       />
