@@ -6,7 +6,7 @@ import Footer from '../components/Footer/index.jsx';
 import PorfolioPreview from '../components/PortfolioPreview/index.jsx';
 import Avatar from '../components/Images/avatar.jsx';
 
-const projects = Astro.fetchContent('./project/**/*.md');
+const projects = await Astro.glob('./project/**/*.md');
 const featuredProject = projects[0];
 ---
 
