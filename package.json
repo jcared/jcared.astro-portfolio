@@ -1,12 +1,18 @@
 {
   "name": "@astrojs/portfolio-template",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.5",
   "scripts": {
+    "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build"
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^0.26.1"
+    "@astrojs/preact": "^0.1.3",
+    "astro": "^1.0.0-beta.50"
+  },
+  "dependencies": {
+    "preact": "^10.7.3"
   }
 }
