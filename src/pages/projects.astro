@@ -4,16 +4,9 @@ import Footer from '../components/Footer/index.jsx';
 import Nav from '../components/Nav/index.jsx';
 import PortfolioPreview from '../components/PortfolioPreview/index.jsx';
 
-let { collection } = Astro.props;
-export async function createCollection() {
-  return {
-    async data() {
-      const projects = Astro.fetchContent('./project/*.md');
-      projects.sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
-      return projects.filter(({ published_at }) => !!published_at);
-    }
-  }
-}
+const projects = (await Astro.glob('./project/**/*.md'))
+	.filter(({ frontmatter }) => !!frontmatter.publishDate)
+	.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 ---
 
 <html>
