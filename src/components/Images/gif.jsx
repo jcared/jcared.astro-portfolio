@@ -9,7 +9,6 @@ function GifEmbed(props) {
         alt={props.alt}
         sizes={props.sizes}
         alt={props.alt}
-        class={}
         width={props.width}
         height={props.height}
       />
