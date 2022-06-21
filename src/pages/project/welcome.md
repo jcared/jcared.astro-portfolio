@@ -14,7 +14,7 @@ tags:
 
 &emsp; &emsp; &emsp;Presuming you've found yourself here, you have likely stumbled across my resume, was referred to by myself in person, or randomly searched for my name for whatever reason.
 
-<h2 style="text-align: center;">I welcome you!</h1>
+<h2 style="text-align: center;">I welcome you!</h2>
 
 To be honest, this project page here is what I was provided by default with the web framework that I was given. However, I felt it such a shame to let such good code go to waste. So I decided to indulge in some explanation.
 
