@@ -1,12 +1,12 @@
 {
   "name": "@astrojs/portfolio-template",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "start": "astro dev",
     "build": "astro build"
   },
   "devDependencies": {
-    "astro": "^1.6.3"
+    "astro": "^1.8.0"
   }
 }
